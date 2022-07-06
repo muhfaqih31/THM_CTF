@@ -1,4 +1,4 @@
-=======================================================
+```
 PORT   STATE SERVICE REASON  VERSION
 22/tcp open  ssh     syn-ack OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
 | ssh-hostkey: 
@@ -14,6 +14,7 @@ PORT   STATE SERVICE REASON  VERSION
 |_  Supported Methods: GET HEAD POST OPTIONS
 |_http-server-header: Apache/2.4.38 (Debian)
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
 ===============================================================
 
 whatweb http://10.10.49.168
