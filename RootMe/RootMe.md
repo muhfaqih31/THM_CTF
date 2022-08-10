@@ -36,7 +36,7 @@ SSH
 Find directories on the web server using the GoBuster tool.
 gobuster dir -u http://10.10.240.17 -w /usr/share/seclists/Discovery/Web-Content/common.txt 
 
-![[Pasted image 20220810205406.png]]
+![alt text](Pasted image 20220810205406.png)
 
 What is the hidden directory?
 /panel
