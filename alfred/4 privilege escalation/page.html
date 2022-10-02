@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4 Privilege Escalation</title>
+</head><body>Use command whoami /priv on netcat reverse shell to reveal the Privileges Information.<br/>
+<br/>
+As we can see that SetDebugPrivilege and SetImpersonatePrivilege is enabled<br/>
+<img src="image.png" width="700" height="556" /><br/>
+<br/>
+On meterpreter type use incognito to use incognito module, then list_tokens -g to list delegation tokens available<br/>
+<br/>
+<img src="image_2.png" /><br/>
+<br/>
+As you can see BUILTIN/Administrators is available<br/>
+<br/>
+<img src="image_3.png" /><br/>
+<br/>
+impersonate_token "BUILTIN\Administrators" &nbsp;to become Administrators. To check if you become administrator run getuid command<br/>
+<br/>
+<img src="image_4.png" /><br/>
+<br/>
+<br/>
+Even though you are a privilegded token (Administrator), you still can't read the root.txt that located on C:\Windows\System32\config\root.txt. Because Windows handles permissions by using the Primary Token of the process and not the impersonated token to determine what the process can or cannot do). To handle this you migrate to other process, the safest one is services.exe. ps services.exe to get the PID and migrate to the PID number you've got.<br/>
+<br/>
+<img src="image_5.png" /><br/>
+<br/>
+read the flag by using cat command<br/>
+<img src="image_6.png" /><br/>
+<br/>
+<br/>
+<br/>
+</body></html>

