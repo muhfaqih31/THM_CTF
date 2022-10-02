@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Web Directory Enum</title>
+</head><body>gobuster dir -u http://10.10.153.187/ -w /usr/share/seclists/Discovery/Web-Content/common.txt<br/>
+<br/>
+===============================================================<br/>
+2022/09/22 14:02:49 Starting gobuster in directory enumeration mode<br/>
+===============================================================<br/>
+/.htaccess &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Status: 403) [Size: 278]<br/>
+/.hta &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Status: 403) [Size: 278]<br/>
+/.htpasswd &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Status: 403) [Size: 278]<br/>
+/admin &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Status: 301) [Size: 314] [--&gt; http://10.10.153.187/admin/]<br/>
+/config &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Status: 301) [Size: 315] [--&gt; http://10.10.153.187/config/]<br/>
+/css &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Status: 301) [Size: 312] [--&gt; http://10.10.153.187/css/] &nbsp; <br/>
+/index.html &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Status: 200) [Size: 523] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+/js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Status: 301) [Size: 311] [--&gt; http://10.10.153.187/js/] &nbsp; &nbsp;<br/>
+/server-status &nbsp; &nbsp; &nbsp; &nbsp;(Status: 403) [Size: 278] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+/squirrelmail &nbsp; &nbsp; &nbsp; &nbsp; (Status: 301) [Size: 321] [--&gt; http://10.10.153.187/squirrelmail/]</body></html>

